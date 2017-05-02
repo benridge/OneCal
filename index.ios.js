@@ -11,8 +11,9 @@ const logger = createLogger({ predicate: (state, action) => __DEV__ });
 
 const initialState = {
   calendarState: {
-    title: 'index title',
-    isFetching: true
+    title: 'OneCal quick entry',
+    isFetching: true,
+    events: []
   }
 }
 
