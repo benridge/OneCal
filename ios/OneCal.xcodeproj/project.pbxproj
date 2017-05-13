@@ -38,6 +38,8 @@
 		B5BF2C3C1EC626B50091A26E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5BF2C3B1EC626B50091A26E /* CoreFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B5BF2C3E1EC627E60091A26E /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5BF2C3D1EC627E60091A26E /* EventKit.framework */; };
 		B5BF2C401EC629950091A26E /* libRNCalendarEvents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5BF2C391EBD34600091A26E /* libRNCalendarEvents.a */; };
+		B5BF2C421EC6D5280091A26E /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5BF2C411EC6D5280091A26E /* FontAwesome.ttf */; };
+		B5BF2C491EC6D6090091A26E /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5BF2C481EC6D5E60091A26E /* libRNVectorIcons.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,6 +232,13 @@
 			remoteGlobalIDString = BEC43C6A1C723089001221C6;
 			remoteInfo = RNCalendarEvents;
 		};
+		B5BF2C471EC6D5E60091A26E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5BF2C431EC6D5E60091A26E /* RNVectorIcons.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5DBEB1501B18CEA900B34395;
+			remoteInfo = RNVectorIcons;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -260,6 +269,8 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		B5BF2C3B1EC626B50091A26E /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		B5BF2C3D1EC627E60091A26E /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		B5BF2C411EC6D5280091A26E /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		B5BF2C431EC6D5E60091A26E /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +286,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5BF2C491EC6D6090091A26E /* libRNVectorIcons.a in Frameworks */,
 				B5BF2C401EC629950091A26E /* libRNCalendarEvents.a in Frameworks */,
 				B5BF2C3E1EC627E60091A26E /* EventKit.framework in Frameworks */,
 				B5BF2C3C1EC626B50091A26E /* CoreFoundation.framework in Frameworks */,
@@ -396,6 +408,7 @@
 		13B07FAE1A68108700A75B9A /* OneCal */ = {
 			isa = PBXGroup;
 			children = (
+				B5BF2C411EC6D5280091A26E /* FontAwesome.ttf */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -442,6 +455,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				B5BF2C431EC6D5E60091A26E /* RNVectorIcons.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -506,6 +520,14 @@
 				B5BF2C3B1EC626B50091A26E /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5BF2C441EC6D5E60091A26E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5BF2C481EC6D5E60091A26E /* libRNVectorIcons.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -670,6 +692,10 @@
 				{
 					ProductGroup = B5BF2C1C1EBD345F0091A26E /* Products */;
 					ProjectRef = 52FE6D5F307D481DBFAFC266 /* RNCalendarEvents.xcodeproj */;
+				},
+				{
+					ProductGroup = B5BF2C441EC6D5E60091A26E /* Products */;
+					ProjectRef = B5BF2C431EC6D5E60091A26E /* RNVectorIcons.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -858,6 +884,13 @@
 			remoteRef = B5BF2C381EBD34600091A26E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		B5BF2C481EC6D5E60091A26E /* libRNVectorIcons.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNVectorIcons.a;
+			remoteRef = B5BF2C471EC6D5E60091A26E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -874,6 +907,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				B5BF2C421EC6D5280091A26E /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

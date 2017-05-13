@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import HeaderContainer from './HeaderContainer';
 import CalendarContainer from './CalendarContainer';
+import TabbedApp from '../component/TabbedApp';
 import RNCalendarEvents from 'react-native-calendar-events';
-import { View, TabBarIOS } from 'react-native';
+import { View } from 'react-native';
 import { fetchEvents, fetchCalendars, errorEncountered } from '../action/CalendarActions';
 import { connect } from 'react-redux';
 
@@ -23,10 +24,7 @@ class AppContainer extends Component {
 
   render() {
     return (
-      <View>
-        <HeaderContainer />
-        <CalendarContainer />
-      </View>
+      <TabbedApp />
     );
   }
 }

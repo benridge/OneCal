@@ -42,6 +42,10 @@
 	<string></string>
 	<key>NSCalendarsUsageDescription</key>
 	<string>OneCal needs Calendar access to display a list of your Calendars and add events.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FontAwesome.ttf</string>
+	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSExceptionDomains</key>
