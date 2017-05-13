@@ -22,3 +22,7 @@ export const getTimeFormat = (dateString) => {
 
   return moment.format('LT');
 }
+
+export const getPreviousMonth = () => {
+  return Moment().subtract(1, 'month').toDate();
+}

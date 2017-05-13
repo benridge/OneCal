@@ -5,10 +5,10 @@ import { StyleSheet, Text, View } from 'react-native';
 export const groupEvents = (events, styles) => {
   events = events || [];
   return events.reduce((groupedEvents, event, idx, allEvents) => {
-    const dayFormatted = getDateFormat(event.date);
-    const timeFormatted = getTimeFormat(event.date);
+    const dayFormatted = getDateFormat(event.startDate);
+    const timeFormatted = getTimeFormat(event.startDate);
     if (groupedEvents.length === 0 ||
-        !isSameDay(event.date, allEvents[idx-1].date)) {
+        !isSameDay(event.startDate, allEvents[idx-1].startDate)) {
       const groupHeader = (
         <View key={ groupedEvents.length } style={ styles.groupView }>
           <Text style={ styles.groupDate }>
@@ -20,11 +20,8 @@ export const groupEvents = (events, styles) => {
     } 
     const eventRow = (
       <View key={ groupedEvents.length } style={ styles.eventView }>
-        <Text style={ styles.eventTime }>
-          { timeFormatted }
-        </Text>
-        <Text style={ styles.eventName }>
-          { event.name }
+        <Text style={ styles.nameRow }>
+          { timeFormatted } - { event.title }
         </Text>
       </View>
     );

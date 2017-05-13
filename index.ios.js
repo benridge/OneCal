@@ -10,11 +10,12 @@ import AppContainer from './app/container/AppContainer';
 const logger = createLogger({ predicate: (state, action) => __DEV__ });
 
 const initialState = {
-  calendarState: {
-    title: 'OneCal quick entry',
-    isFetching: true,
-    events: []
-  }
+  title: 'OneCal quick entry',
+  isFetching: true,
+  events: [],
+  calendars: [],
+  //TODO: Change to calendarId, saved in settings
+  calendarName: "Ben's Health Log", 
 }
 
 const configureStore = (initialState) => {

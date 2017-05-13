@@ -17,10 +17,8 @@ class HeaderContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log('HC: mapStateToProps state: ', state);
-  const calendarState = state.calendarState;
-  const title = calendarState.title;
-  const isFetching = calendarState.isFetching;
+  const title = state.title;
+  const isFetching = state.isFetching;
 
   return {
     title,

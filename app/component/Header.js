@@ -8,26 +8,39 @@ class Header extends Component {
     isFetching: React.PropTypes.bool
   };
 
+  renderLoadingIndicator() {
+    const { isFetching } = this.props;
+    if (isFetching) {
+      return <LoadingIndicator isLoading={ isFetching } style={ styles.loadingIndicator } />;
+    }
+  }
+
   render() {
     const { title, isFetching } = this.props;
-
+    const loadingIndicator = this.renderLoadingIndicator();
     return (
-      <View style={ styles.view }> 
-        <Text style={ styles.title }>{ title }</Text>
-        <LoadingIndicator isLoading={ isFetching } style={styles.loadingIndicator }/>
+      <View style={ styles.headerView }> 
+        <Text style={ styles.headerTitle }>{ title }</Text>
+        { loadingIndicator }
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  view: {
-    flex: 1, 
+  headerView: {
+    display: 'flex', 
     flexDirection: 'row', 
-    marginTop: 20 
+    marginTop: 20,
+    backgroundColor: 'black',
   },
-  title: {
-    flex: 1
+  headerTitle: {
+    marginTop: 3,
+    marginBottom: 3,
+    flex: 1, 
+    fontSize: 20,
+    textAlign: 'center',
+    color: 'white' 
   },
   loadingIndicator: {
     width: 50

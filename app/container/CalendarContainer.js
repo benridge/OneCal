@@ -1,27 +1,30 @@
 import React, { Component } from 'react';
 import CalendarList from '../component/CalendarList';
-import { getEvents } from '../utils/GoogleCal';
 import { connect } from 'react-redux';
 
 class CalendarContainer extends Component {
-
   static propTypes = {
-    events: React.PropTypes.array
+    events: React.PropTypes.array,
+    calendars: React.PropTypes.array
   }  
 
   render() {
     return (
-      <CalendarList events={ this.props.events } />
+      <CalendarList 
+        events={ this.props.events } 
+        calendars={ this.props.calendars }
+        error={ this.props.error }
+      />
     )
   }
 }
 
-const mapStateToProps = () => {
-  const events = getEvents(null, null);
-
+const mapStateToProps = (state) => {
   return {
-    events
-  };
+    events: state.events, 
+    calendars: state.calendars,
+    error: state.error
+  }
 }
 
 export default connect(mapStateToProps)(CalendarContainer);
