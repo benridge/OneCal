@@ -36,7 +36,6 @@ class EventList extends Component {
   }
 
   render() {
-    //TODO: groupEvents in reducer, so only when events change
     const groupedEvents = groupEvents(this.props.events);
     return (
       <View>
