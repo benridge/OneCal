@@ -4,7 +4,7 @@ import { getDateFormat, getTimeFormat, isSameDay } from '../utils/Dates';
 
 const groupEvents = (events) => {
     events = events || [];
-    return events.reduce((groupedEvents, event, idx, allEvents) => {
+    return events.reverse().reduce((groupedEvents, event, idx, allEvents) => {
       const dayFormatted = getDateFormat(event.startDate);
       const timeFormatted = getTimeFormat(event.startDate);
       if (groupedEvents.length === 0 ||
@@ -36,10 +36,11 @@ class EventList extends Component {
   }
 
   render() {
+    //TODO: groupEvents in reducer, so only when events change
     const groupedEvents = groupEvents(this.props.events);
     return (
       <View>
-        <Text style={ styles.eventTitle }>Previous Events</Text>
+        <Text style={ styles.eventTitle }>Past Events</Text>
         <ScrollView style={ styles.eventList }>
           { groupedEvents }
         </ScrollView>

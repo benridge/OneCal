@@ -15,7 +15,8 @@ const initialState = {
   events: [],
   calendars: [],
   //TODO: Change to calendarId, saved in settings
-  calendarName: "Ben's Health Log", 
+  calendarName: "Calendar",
+  //calendarName: "Ben's Health Log", 
 }
 
 const configureStore = (initialState) => {

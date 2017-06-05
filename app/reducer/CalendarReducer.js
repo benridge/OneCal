@@ -1,8 +1,8 @@
 import { 
   ERROR_ENCOUNTERED,
   REQUEST_CALENDAR_DATA, 
-  SET_CALENDAR_EVENTS, 
-  SET_CALENDARS 
+  CALENDAR_EVENTS_RECEIVED, 
+  CALENDARS_RECEIVED,
 } from '../utils/Constants';
 import { createReducer } from '../utils/Reducers';
 
@@ -37,7 +37,7 @@ const initialState = {
 }
 export default createReducer(initialState, {
     REQUEST_CALENDAR_DATA: calendarRequested,
-    SET_CALENDAR_EVENTS: setCalendarEvents,
+    CALENDAR_EVENTS_RECEIVED: setCalendarEvents,
     CALENDARS_RECEIVED: setCalendars,
     ERROR_ENCOUNTERED: errorEncountered
   }
